@@ -1,5 +1,5 @@
 ## CLASSE PERSONAGEM -> super() ##
-from .superPoder import SuperPoder
+from superPoder import SuperPoder
 
 class Personagem:
   # Construtor
@@ -14,7 +14,7 @@ class Personagem:
     if superpoder not in self.__poderes:
       self.__poderes.append(superpoder)
     else:
-      print('O superpoder não pode ser usado mais que uma vez!!') 
+      print('O superpoder já foi usado em outra rodada. Escolha outro superpoder!!') 
           
   def get_poder_total(self):
     poder_total = 0

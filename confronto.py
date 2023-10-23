@@ -1,18 +1,16 @@
 ## CLASSE CONFRONTO ##
-from .superHeroi import SuperHeroi
-from .vilao import Vilao
-
-class Confronto():
+class Confronto:
   def lutar(self, superheroi, vilao):
-    poderHeroi = SuperHeroi().get_poder_total()
-    poderVilao = Vilao.get_poder_total()
+    poderHeroi = superheroi.get_poder_total()
+    poderVilao = vilao.get_poder_total()
 
-    resultado = 0
-    if poderHeroi.value() == poderVilao.value():
-      resultado = '0'
-    elif poderHeroi.value() > poderVilao.value():
-      resultado = '1'
-    elif poderHeroi.value() < poderVilao.value():
-      resultado = '2'
+    if poderHeroi == poderVilao:
+      resultado = 0
+
+    elif poderHeroi > poderVilao:
+      resultado = 1
+
+    elif poderHeroi < poderVilao:
+      resultado = 2
 
     return resultado

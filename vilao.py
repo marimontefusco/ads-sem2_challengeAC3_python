@@ -1,5 +1,5 @@
 ## CLASSE VILAO ##
-from .personagem import Personagem
+from personagem import Personagem
 
 class Vilao(Personagem):
     # Construtor
